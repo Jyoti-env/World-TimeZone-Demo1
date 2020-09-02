@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e7a46101-a427-4a62-a01e-acef830422ee" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="github-jenkins-cloudhub-demoFlow" doc:id="505d15c8-14a8-4630-83bd-573fd04a98bd" >
+		<http:listener doc:name="Listener" doc:id="d5a60498-5c8b-4f9c-b330-e621d8314150" config-ref="HTTP_Listener_config" path="/hub"/>
+		<set-payload value="Radhe Krishna.........." doc:name="Set Payload" doc:id="61c67990-4132-40b5-8684-945404d08f4a" />
+	</flow>
+</mule>
